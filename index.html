@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Shine Surprise Events</title> <!-- this is my first modification I will have to download the original source code to see how it goes--> <!-- looking to add events as a subscript in the title is it even possible? -->
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> <!-- looking for a way to add a favicon different from the one automatically displayed -->
+         
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico"> <!-- okay I have seen the error -->
+    </head>
+
+    <body>
+ 
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar start -->
+        <div class="container-fluid border-bottom bg-light wow fadeIn" data-wow-delay="0.1s">
+            <div class="container topbar bg-primary d-none d-lg-block py-2" style="border-radius: 0 40px">
+                <div class="d-flex justify-content-between">
+                    <div class="top-info ps-2">
+                        <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">Berlin</a></small> <!-- No street address, added only town -->
+                        <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">shinesurpriseevents@gmail.com</a></small> <!-- added email here -->
+                    </div>
+                    <div class="top-link pe-2">
+                        <a href="" class="btn btn-light btn-sm-square rounded-circle"><i class="fab fa-facebook-f text-secondary"></i></a>
+                        <a href="" class="btn btn-light btn-sm-square rounded-circle"><i class="fab fa-twitter text-secondary"></i></a>
+                        <a href="" class="btn btn-light btn-sm-square rounded-circle"><i class="fab fa-instagram text-secondary"></i></a>
+                        <a href="" class="btn btn-light btn-sm-square rounded-circle me-0"><i class="fab fa-linkedin-in text-secondary"></i></a>  <!-- don't know social media links have not yet learned how to insert them -->
+
+                    </div>
+                </div>
+            </div>
+            <div class="container px-0">
+                <nav class="navbar navbar-light navbar-expand-xl py-3">
+
+                    <a href="index.html" class="navbar-brand"><h1 class="text-primary display-6">Shine<span class="text-secondary">Surprise<sub><em><small>Events</small></em></sub></span></h1></a> <!-- this is my second modification it appeared somehow right but still need to look into it with the colours and display, think there is more to do here -->
+
+                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars text-primary"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto">
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="about.html" class="nav-item nav-link">À propos</a>
+                            <div class="nav-item dropdown"> <!-- to modify home and contact address no about? but the others for sure ain't here -->
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+
+                                </div>
+
+<div class="d-flex me-4">
+                            <div id="phone-tada" class="d-flex align-items-center justify-content-center">
+                                <a href="" class="position-relative wow tada" data-wow-delay=".9s" >
+                                    <i class="fa fa-phone-alt text-primary fa-2x me-4"></i>
+                                    <div class="position-absolute" style="top: -7px; left: 20px;">
+                                        <span><i class="fa fa-comment-dots text-secondary"></i></span>
+                                    </div>
+                                </a>
+                            </div>
+ <div class="d-flex flex-column pe-3 border-end border-primary">
+                                <span class="text-primary">Pour plus d'informations</span>
+                                <a href="#"><span class="text-secondary">Appelez: +49 176 22598227</span></a> <!-- modifiied the text and phone in the above two lines -->
+                            </div>
+                        </div>
+                        <button class="btn-search btn btn-primary btn-md-square rounded-circle" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-white"></i></button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+                            </div>
+                        </div>
+
+                           
+        <!-- Navbar End -->
+
+
+        <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control p-3" placeholder="Mot clé" aria-describedby="search-icon-1"> <!-- Modification here mots clé -->
+                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
+
+        <!-- Hero Start -->
+        <div class="container-fluid py-5 hero-header wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-7 col-md-12">
+                        <h1 class="mb-3 text-primary">Quelle est La devise?</h1>
+                        <h1 class="mb-5 display-1 text-white">La meilleur agence d'offre de cadeau de Berlin?</h1> <!-- just to see where it lies je crois que c'est à eux de nous dire quoi mettre, leur référence -->
+                        <a href="" class="btn btn-primary px-4 py-3 px-md-5  me-4 btn-border-radius">Get Started</a> <!-- don't know what to write here -->
+                        <a href="" class="btn btn-primary px-4 py-3 px-md-5 btn-border-radius">Learn More</a> <!-- don't know what to write here either search french pages to see display -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
+
+
+        <!-- About Start -->
+        <div class="container-fluid py-5 about bg-light">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                                                                                    <span></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 wow fadeIn" data-wow-delay="0.3s">
+                        <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">QUI SOMMES NOUS</h4>
+                        <h1 class="text-dark mb-4 display-5">Nous Vous Aidons A Rendre Vos Surprise Inoubliable Et Pleine D'Emotions</h1>
+<!--change the line above with what shine surprise does-->
+                        <p class="text-dark mb-4">Souhaitez-vous offrir un cadeau à une personne qui vous est chère dans la ville de Berlin?
+                        </p>
+                        <div class="row mb-4">
+                            <div class="col-lg-6">
+                                <h6 class="mb-3"><i class="fas fa-check-circle me-2"></i>Anniversaire</h6>
+                                <h6 class="mb-3"><i class="fas fa-check-circle me-2 text-primary"></i>Saint Valentin</h6>
+                                <h6 class="mb-3"><i class="fas fa-check-circle me-2 text-secondary"></i>Fête des mères</h6>
+                            </div>
+                            <div class="col-lg-6">
+                                <h6 class="mb-3"><i class="fas fa-check-circle me-2"></i>Fête des pères</h6>
+                                <h6 class="mb-3"><i class="fas fa-check-circle me-2 text-primary"></i>Fête de Noël</h6>
+                                <h6><i class="fas fa-check-circle me-2 text-secondary"></i>Demande en marriage</h6>
+                                <h6><i class="fas fa-check-circle me-2 text-secondary"></i>Et bien d'autres...</h6> <!-- tried to put in the same line with saint val, that is same row but third column -->
+                            </div>
+                        </div>
+                        <a href="" class="btn btn-primary px-5 py-3 btn-border-radius">En Savoir Plus</a> <!-- tried to make it twinkle to no avail -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Video --> <!-- didn't see where to change the background to something gift -->
+        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                                allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Service Start -->
+        <div class="container-fluid service py-5">
+            <div class="container py-5">
+                <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
+                    <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Nos Offres</h4> <!-- qqchse de plus accrocheur -->
+                    <h1 class="mb-5 display-3">Merci De Choisir Shine Surprise <sub>Events</sub></h1> <!-- may be add a smiley at the end of the text -->
+                </div>
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="text-center border-primary border bg-white service-item">
+                            <div class="service-content d-flex align-items-center justify-content-center p-4">
+                                <div class="service-content-inner">
+                                    <div class="p-4"><i class="fas fa-gamepad fa-6x text-primary"></i></div> <!-- look for ways to change the icons -->
+                                    <a href="#" class="h4">Les Idée de Cadeaux</a>
+                                    <p class="my-3">Text pour anniversaire.</p>
+                                    <a href="#" class="btn btn-primary text-white px-4 py-2 my-2 btn-border-radius">Voir Plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeIn" data-wow-delay="0.3s">
+                        <div class="text-center border-primary border bg-white service-item">
+                            <div class="service-content d-flex align-items-center justify-content-center p-4">
+                                <div class="service-content-inner">
+                                    <div class="p-4"><i class="fas fa-sort-alpha-down fa-6x text-primary"></i></div>
+                                    <a href="#" class="h4">Toutes Nos Offres</a>
+                                    <p class="my-3">Text pour les anniversaires, demandes en marriage, st. val etc.</p>
+                                    <a href="#" class="btn btn-primary text-white px-4 py-2 my-2 btn-border-radius">Voir Plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="text-center border-primary border bg-white service-item">
+                            <div class="service-content d-flex align-items-center justify-content-center p-4">
+                                <div class="service-content-inner">
+                                    <div class="p-4"><i class="fas fa-users fa-6x text-primary"></i></div>
+                                    <a href="#" class="h4">Notre Equipe</a>
+                                    <p class="my-3">Présentation de L'équipe.</p>
+                                    <a href="#" class="btn btn-primary text-white px-4 py-2 my-2 btn-border-radius">Voir Plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeIn" data-wow-delay="0.7s">
+                        <div class="text-center border-primary border bg-white service-item">
+                            <div class="service-content d-flex align-items-center justify-content-center p-4">
+                                <div class="service-content-inner">
+                                    <div class="p-4"><i class="fas fa-user-nurse fa-6x text-primary"></i></div>
+                                    <a href="#" class="h4">Avis</a>
+                                    <p class="my-3">texte sur le service dynamique.</p>
+                                    <a href="#" class="btn btn-primary text-white px-4 py-2 my-2 btn-border-radius">Voir Plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+
+
+        <!-- Programs Start -->
+        <div class="container-fluid program  py-5">
+            <div class="container py-5">
+                <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
+                    <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Nos Prix</h4>
+                    <h1 class="mb-5 display-3">Nous Des Cadeaux Adaptées A Vos Etre Aimée</h1> <!-- qqchse comme ça -->
+                </div>
+                <div class="row g-5 justify-content-center">
+                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="program-item rounded">
+                            <div class="program-img position-relative">
+                                <div class="overflow-hidden img-border-radius">
+                                    <img src="img/classy hair.jpg" class="img-fluid w-100" alt="Image"> <!-- change image here -->
+                                </div>
+                                <div class="px-4 py-2 bg-primary text-white program-rate">€9.99</div> <!-- change price here -->
+                            </div>
+                            <div class="program-text bg-white px-4 pb-3">
+                                <div class="program-text-inner">
+                                    <a href="#" class="h4">Anniversaire 2.0</a> <!-- change image name here -->
+                                    <p class="mt-3 mb-0">design kara 3</p> <!-- change image description here -->
+                                </div>
+                            </div>
+
+
+                    </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.3s">
+                        <div class="program-item rounded">
+                            <div class="program-img position-relative">
+                                <div class="overflow-hidden img-border-radius">
+                                    <img src="img/program-2.jpg" class="img-fluid w-100" alt="Image"> <!-- change image here -->
+                                </div>
+                                <div class="px-4 py-2 bg-primary text-white program-rate">€9.99</div> <!-- change price here -->
+                            </div>
+                            <div class="program-text bg-white px-4 pb-3">
+                                <div class="program-text-inner">
+                                    <a href="#" class="h4">Saint Valentin</a> <!-- change image name here -->
+                                    <p class="mt-3 mb-0">emballage bio</p> <!-- change image description here -->
+                                </div>
+                            </div>
+
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="program-item rounded">
+                            <div class="program-img position-relative">
+                                <div class="overflow-hidden img-border-radius">
+                                    <img src="img/program-3.jpg" class="img-fluid w-100" alt="Image"> <!-- change image here -->
+                                </div>
+                                <div class="px-4 py-2 bg-primary text-white program-rate">€9.99</div> <!-- change price here -->
+                            </div>
+                            <div class="program-text bg-white px-4 pb-3">
+                                <div class="program-text-inner">
+                                    <a href="#" class="h4">Demande En Marriage</a> <!-- change image name here -->
+                                    <p class="mt-3 mb-0">Proposition 4.0</p> <!-- change image description here -->
+                                </div>
+                            </div>
+                          
+                        </div>
+                    </div>
+                    <div class="d-inline-block text-center wow fadeIn" data-wow-delay="0.1s">
+                        <a href="#" class="btn btn-primary px-5 py-3 text-white btn-border-radius">Voir Toutes Nos Offres</a>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <!-- Program End -->
+
+
+        <!-- Team Start-->
+        <div class="container-fluid team py-5">
+            <div class="container py-5">
+                <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Our Team</h4> <!-- je ne sais plus quoi mettre ici -->
+                    <h1 class="mb-5 display-3">Meet With Our CEO</h1>
+                </div>
+                <div class="row g-5 justify-content-center">
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="team-item border border-primary img-border-radius overflow-hidden">
+                            <img src="img/the CEO.jpeg" class="img-fluid w-100" alt=""> <!-- inserted ceo's picture -->
+                            <div class="team-icon d-flex align-items-center justify-content-center">
+                                <a class="share btn btn-primary btn-md-square text-white rounded-circle me-3" href=""><i class="fas fa-share-alt"></i></a>
+                                <a class="share-link btn btn-primary btn-md-square text-white rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="share-link btn btn-primary btn-md-square text-white rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="share-link btn btn-primary btn-md-square text-white rounded-circle" href=""><i class="fab fa-instagram"></i></a>
+
+<!-- link buttons to facebook instagram and other social media accounts -->
+
+                            </div>
+                            <div class="team-content text-center py-3">
+                                <h4 class="text-primary">Linda Carlson</h4> <!-- CEO's Name -->
+                                <p class="text-muted mb-2">CEO</p> <!-- CEO full form maybe in french? -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Team End-->
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                        <div class="footer-item">
+                            <h2 class="fw-bold mb-3"><span class="text-primary mb-0">Shine</span><span class="text-secondary">Surprise<sub><small class="text-secondary">Events</small></sub></span></h2>
+                            <p class="mb-4">C'est toujour un plaisir pour nous de vous assistez à offrir un cadeau ou faire une surprise à quelqu'un de proche, qui réside à berlin</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                        <div class="footer-item">
+                            <div class="d-flex flex-column p-4 ps-5 text-dark border border-primary" 
+                            style="border-radius: 50% 20% / 10% 40%;">
+                                <p>Monday: 8am to 6pm</p>
+                                <p>Tuesday: 8am to 6pm</p>
+                                <p>Wednes: 8am to 6pm</p>
+                                <p>Thursday: 8am to 6pm</p>
+                                <p>Friday: 8am to 6pm</p>
+                                <p>Saturday: 8am to 6pm</p>
+                                <p class="mb-0">Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                        <div class="footer-item">
+                            <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">LOCATION</h4>
+                            <div class="d-flex flex-column align-items-start">
+                                <a href="" class="text-body mb-4"><i class="fa fa-map-marker-alt text-primary me-2"></i> Allemagne, Berlin</a>
+                                <a href="" class="text-start rounded-0 text-body mb-4"><i class="fa fa-phone-alt text-primary me-2"></i> +4917622598227</a>
+                                <a href="" class="text-start rounded-0 text-body mb-4"><i class="fas fa-envelope text-primary me-2"></i> shinesurpriseevents@gmail.com</a>
+                                <a href="" class="text-start rounded-0 text-body mb-4"><i class="fa fa-clock text-primary me-2"></i> 24/7 disponible</a>
+                                <div class="footer-icon d-flex">
+                                    <a class="btn btn-primary btn-sm-square me-3 rounded-circle text-white" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-primary btn-sm-square me-3 rounded-circle text-white" href=""><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="btn btn-primary btn-sm-square me-3 rounded-circle text-white"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" class="btn btn-primary btn-sm-square rounded-circle text-white"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                        <div class="footer-item">
+                            <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">OUR GALLARY</h4>
+                            <div class="row g-3">
+                                <div class="col-4">
+                                    <div class="footer-galary-img rounded-circle border border-primary">
+                                        <img src="img/galary-1.jpg" class="img-fluid rounded-circle p-2" alt="">
+                                    </div>
+                               </div>
+                               <div class="col-4">
+                                    <div class="footer-galary-img rounded-circle border border-primary">
+                                        <img src="img/galary-2.jpg" class="img-fluid rounded-circle p-2" alt="">
+                                    </div>
+                               </div>
+                                <div class="col-4">
+                                    <div class="footer-galary-img rounded-circle border border-primary">
+                                        <img src="img/galary-3.jpg" class="img-fluid rounded-circle p-2" alt="">
+                                    </div>
+                               </div>
+                                <div class="col-4">
+                                    <div class="footer-galary-img rounded-circle border border-primary">
+                                        <img src="img/galary-4.jpg" class="img-fluid rounded-circle p-2" alt="">
+                                    </div>
+                               </div>
+                                <div class="col-4">
+                                    <div class="footer-galary-img rounded-circle border border-primary">
+                                        <img src="img/galary-5.jpg" class="img-fluid rounded-circle p-2" alt="">
+                                    </div>
+                               </div>
+                                <div class="col-4">
+                                    <div class="footer-galary-img rounded-circle border border-primary">
+                                        <img src="img/galary-6.jpg" class="img-fluid rounded-circle p-2" alt="">
+                                    </div>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright bg-dark py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <span class="text-light"><a href="https://dev.osseca.com"><i class="fas fa-copyright text-light me-2"></i>Osseca</a>, All right reserved.</span>
+                    </div>
+                    <div class="col-md-6 my-auto text-center text-md-end text-white">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                        Developed By <a class="border-bottom" href="https://dev.osseca.com">Osseca</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    </body>
+
+</html>
